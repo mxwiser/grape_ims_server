@@ -4,9 +4,10 @@ var router = express.Router();
 var helper = require('../src/helper')
 
 
-router.get('/', function(req, res, next) {
-    helper.setHtmlHeader(res)
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+router.get('*', function(req, res, next) {
+    helper.setHtmlHeader(res);
+    next();
+   // res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
 module.exports = router;

@@ -20,10 +20,10 @@ app.use('/',express.static('./dist'));
 
 //routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-app.use('/api', usersRouter);
+var apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 app.use('/', indexRouter);
-app.use('/',express.static('./dist'));
+
 
 
 module.exports = app;
