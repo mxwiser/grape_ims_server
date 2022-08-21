@@ -25,5 +25,7 @@ app.use('/api', apiRouter);
 app.use('/', indexRouter);
 
 
+process.env.PORT="3001";
+
 
 module.exports = app;
