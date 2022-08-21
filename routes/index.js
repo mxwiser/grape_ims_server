@@ -6,7 +6,7 @@ var helper = require('../src/helper')
 
 /* GET home page. */
 router.get('*', function(req, res, next) {
-  helper.setHtmlHeader(res)
+  helper.setCrosHeader(res)
   res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 

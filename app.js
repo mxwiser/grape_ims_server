@@ -26,6 +26,7 @@ app.use('/', indexRouter);
 
 
 process.env.PORT="3001";
-
+//NODE_ENV=developement production
+process.env.SERVER_STATE="developement"
 
 module.exports = app;

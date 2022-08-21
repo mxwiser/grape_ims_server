@@ -8,7 +8,8 @@ var path = require('path');
 
 module.exports = {
 
-    setHtmlHeader(res) {
-    res.header("Access-Control-Allow-Origin", "*");
+    setCrosHeader(res) {
+        if (process.env.SERVER_STATE=="developement")
+            res.header("Access-Control-Allow-Origin", "*");
     }
 }
