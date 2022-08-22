@@ -3,19 +3,14 @@ var router = express.Router();
 
 /* GET users listing. */
 
-
-var appRouter = require('./app');
-
-router.use("/app",appRouter);
-
-
-router.get('*', function(req, res, next) {
-    res.send('respond with a resource aaa');
+//API APP
+router.get('/getName', function(req, res, next) {
+    res.send('Mxw');
 });
-
-
-
-
+router.get('*', function(req, res, next) {
+    res.send('Mxw*');
+});
+//end API APP
 
 
 module.exports = router;
