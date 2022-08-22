@@ -5,8 +5,14 @@ var helper = require('../src/helper')
 
 
 /* GET home page. */
+
+router.use(function (req, res, next) {
+  helper.setCrosHeader(res,true);
+  next();
+});
+
 router.get('*', function(req, res, next) {
-  helper.setCrosHeader(res,true)
+
   res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 

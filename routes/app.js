@@ -1,7 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET APP listing. */
+
+
+router.use(function (req, res, next) {
+
+    next();
+});
+
+
 
 //API APP
 router.get('/getName', function(req, res, next) {

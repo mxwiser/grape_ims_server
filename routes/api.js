@@ -5,9 +5,15 @@ var router = express.Router();
 
 
 var appRouter = require('./app');
-
 router.use("/app",appRouter);
 
+
+
+
+
+router.use(function (req, res, next) {
+   next();
+});
 
 router.get('*', function(req, res, next) {
     res.send('respond with a resource aaa');

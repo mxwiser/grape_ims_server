@@ -7,12 +7,11 @@ var helper = require('../src/helper')
 router.get('/', function(req, res, next) {
     helper.setCrosHeader(res,true);
     next();
-   // res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
-router.get('*', function(req, res, next) {
+router.get('/index.html', function(req, res, next) {
+    helper.setCrosHeader(res,true);
     next();
-    // res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
 module.exports = router;
